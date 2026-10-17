@@ -639,8 +639,8 @@ export async function askAi(text: string, userPrompt?: string) {
     }
 
     try {
-        // ご指定の API v1beta と gemini-3.1-pro-preview モデルを使用
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent?key=${apiKey}`
+        // ご指定の API v1beta と gemini-3.8-flash モデルを使用
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`
 
         const promptText = userPrompt
             ? `以下のテキストに対し、追加指示に従って処理を行ってください。
