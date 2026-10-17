@@ -45,7 +45,7 @@
 | **Icons & UI Components** | Lucide React, Radix UI |
 | **PDF Processing** | `react-pdf`, `pdfjs-dist` |
 | **Database / Auth / Storage** | Supabase, PostgreSQL |
-| **AI Integration** | Google Generative AI API (`gemini-3.1-pro-preview` model) |
+| **AI Integration** | Google Generative AI API (`gemini-3.8-flash` model) |
 
 ---
 

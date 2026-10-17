@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: 'Study Tracker',
     description: 'Cloud-synced smart learning platform',
     manifest: '/manifest.json',
+    icons: { apple: '/icons/icon-192x192.png' },
     appleWebApp: {
         capable: true,
         statusBarStyle: 'black-translucent',

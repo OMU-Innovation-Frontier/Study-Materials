@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { X, Cloud, Pencil, Layout, CheckCircle, ArrowRight, BookOpen } from 'lucide-react'
+import { X, Cloud, Pencil, Layout, CheckCircle, ArrowRight, BookOpen, Tablet, Share } from 'lucide-react'
 
 export function OnboardingModal() {
     const [isOpen, setIsOpen] = useState(false)
@@ -38,6 +38,18 @@ export function OnboardingModal() {
             title: "iPad での手書き対応",
             description: "iPad + Apple Pencil を使えば、教科書に直接書き込みが可能です。注釈もすべてクラウドに同期されます。",
             color: "bg-purple-500/20"
+        },
+        {
+            icon: <Tablet size={48} className="text-white" />,
+            title: "iPad での利用をおすすめします",
+            description: "画面が広く、Apple Pencil での書き込みもできるため、iPad が最も快適です。Safari で開いてください。",
+            color: "bg-orange-500/20"
+        },
+        {
+            icon: <Share size={48} className="text-white" />,
+            title: "アプリとして使う（PWA）",
+            description: "Safari の共有ボタン（□に↑）→「ホーム画面に追加」で、アプリのように全画面で起動できます。インストール不要で、データは同期されます。",
+            color: "bg-cyan-500/20"
         },
         {
             icon: <Layout size={48} className="text-white" />,
