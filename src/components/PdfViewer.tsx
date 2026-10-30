@@ -2,12 +2,11 @@
 
 import { useState, useEffect, useTransition } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
-import { ChevronLeft, ChevronRight, Edit3, Eraser, ArrowLeft, ZoomIn, ZoomOut, RefreshCw, X, Hand, Languages } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Edit3, Eraser, ArrowLeft, ZoomIn, ZoomOut, RefreshCw, X, Hand, Languages, Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { updateProgress, getAnnotations, translateText, askAi, saveAiHistory, getAiHistory, deleteAiHistory } from '@/app/actions'
 import { useRef, useMemo, useCallback } from 'react'
 import { AnnotationCanvas } from './AnnotationCanvas'
-import { ReasoningVisualization } from './ReasoningVisualization'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 import ReactMarkdown from 'react-markdown'
@@ -570,7 +569,7 @@ export function PdfViewer({ materialId, pdfUrl, initialPage, totalPageCount }: P
                             <div className="p-6 md:p-8 space-y-8 pb-32">
                                 {isTranslating ? (
                                     <div className="flex flex-col items-center justify-center py-10 w-full">
-                                        <ReasoningVisualization />
+                                        <Loader2 size={32} className="animate-spin text-white/50" />
                                     </div>
                                 ) : pendingText ? (
                                     <>
